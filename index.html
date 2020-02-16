@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="imgs/neutro.png">
+    <title>AppFlex</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <style>
+    	.navbar-inverse{
+            border-radius: 0px;
+            
+        }
+        h1{
+            color: azure;
+        }
+
+       .img{
+            border-radius: 10px;
+            width: 60%;
+            height: 60%;
+        }
+
+        .valores{
+            border: none;
+            border-bottom: 1px solid gray;
+            padding: 4px;
+            font-size: 20px;
+            margin: 0 8px;
+
+        }
+        form{
+            padding: 4px;
+        }
+
+        .botao{
+            width: 280px;
+        }
+
+        .title{
+            margin: auto auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+          <h1 class="title">Flex BiCombustível </h1>           
+        </div>
+    </nav>
+    <div class="container mt-2">
+        <div>
+            <center>
+                <img src="imgs/neutro.png" alt="appFlex" class="img img-responsive" id="statusNeutro">
+                <br><br>
+                <form name="formFlex">
+                    <input type="text" placeholder="Etanol" class="valores" name="txtEtanol" id="txtEtanol">
+                    <br><br>
+                    <input type="text" placeholder="Gasolina" class="valores" name="txtGasolina" id="txtGasolina">
+                    <br><br>
+                    <button type="button" class="btn btn-primary btn-lg btn-block botao" onclick="calcular()">Vantagem <i class="fas fa-charging-station"></i></button>
+                    <button type="reset" class="btn btn-info btn-lg btn-block botao" onclick="limpar()"> Limpar <i class="fas fa-broom"></i></button>
+                    <button type="button" class="btn btn-danger btn-lg btn-block botao" onclick="sobreApp()"> Sobre o Aplicativo <i class="fas fa-info-circle"></i></button>
+                </form>
+            </center>
+        </div>
+    </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <center>
+            <h2 id="msg"></h2>
+          </center>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="appFlex.js"></script>
+</body>
+</html>
